@@ -1,4 +1,4 @@
-package files.test;
+package files;
 
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;

@@ -1,7 +1,7 @@
 package files;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.QuizModel;
+import model.SimpleJson;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -21,7 +21,7 @@ public class JsonReaderTest {
         try (InputStream is = classLoader.getResourceAsStream("sample.json")) {
             assert is != null;
             try (InputStreamReader isr = new InputStreamReader(is)) {
-                QuizModel data = objectMapper.readValue(isr, QuizModel.class);
+                SimpleJson data = objectMapper.readValue(isr, SimpleJson.class);
 
                 Assertions.assertEquals("0001", data.id);
                 Assertions.assertEquals("Cake", data.name);
